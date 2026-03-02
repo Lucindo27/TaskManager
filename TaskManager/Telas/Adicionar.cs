@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskManager.RN;
 
 namespace TaskManager.Telas
 {
@@ -19,24 +20,22 @@ namespace TaskManager.Telas
             InitializeComponent();
             principal = principalParam;
         }
-                
+             
+        // Evento do botão para adicionar uma tarefa
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
-            AdcionarItem();
-        }
-
-        public void AdcionarItem()
-        {
+            // Verifica se o campo não está vazio
             if (textBoxTarefa.Text != "")
             {
-                principal.AdicionarItemLista(textBoxTarefa.Text);
-
+                RNPrincipal.CriarTarefa(textBoxTarefa.Text);
                 Close();
             }
             else
             {
-                MessageBox.Show("Não é possível criar uma tarefa vazia.");
+                MessageBox.Show("Não é possivel criar uma tarefa vazia.");
+                return;
             }
-        }
+            
+        }        
     }
 }
