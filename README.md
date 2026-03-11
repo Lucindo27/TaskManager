@@ -37,12 +37,3 @@ The main goal of this project is to practice:
 2. Create a SQL Server database
 3. Update the connection string in `Conexao.cs` if necessary
 4. Run the project
-
----
-
-## 📈 Future Improvements
-
-- Implement Dependency Injection
-- Add validation layer
-- Improve error handling
-- Create a user interface (Web or Desktop)
